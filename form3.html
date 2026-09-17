@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="solar/bootstrap.min.css">
+   <style>
+  .seccion {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  .checkbox-box {
+        background: #f1f1f1;
+        padding: 6px 10px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 6px;
+    }
+    .checkbox-box input[type="checkbox"] {
+        transform: scale(1.2);
+        margin-right: 8px;
+        cursor: pointer;
+    }
+
+
+</style>
+
+
+    
+</head>
+<body>
+    <header ></header>
+    <h1 style="text-align: center;">PROYECTO EDUCACIÓN DUAL</h1>
+    <h2 style="text-align: center;">Detección de necesidades</h2>
+        
+        <div class="container ">
+            
+            <form class="form-control" action="procesar3.php" method="post">
+                    <div class="seccion" style="border: 1px solid #d0d0d0; padding: 25px; border-radius: 8px; background: #fafafa;">
+                    <!--top cabecera-->
+                    <div class="seccion" style="border: 1px solid #d0d0d0; padding: 25px; border-radius: 8px; background: #fafafa;">
+                        
+                        <div class="header bg-primary text-white text-center py-2 mb-4" 
+                            style="font-size: 20px; font-weight: 600; letter-spacing: 0.5px;">
+                            Evaluacion de competencias Genericas y profesionales en el desarroqllo del Proyecto de Educación Dual(PED)
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="proyecto" class="form-label fw-semibold">Nombre del Proyecto</label>
+                            <input type="text" class="form-control" id="proyecto" name="proyecto" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="asesor_externo" class="form-label fw-semibold">Nombre del Asesor Externo</label>
+                            <input type="text" class="form-control" id="asesor_externo" name="asesor_externo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nombre_estudiante" class="form-label fw-semibold">Nombre del Estudiante</label>
+                            <input type="text" class="form-control" id="nombre_estudiante" name="nombre_estudiante" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="empresa" class="form-label fw-semibold">Empresa</label>
+                            <input type="text" class="form-control" id="empresa" name="empresa" required>
+                        </div>
+                        
+                        <h5 class="mt-4 fw-bold" style="color:#003366;">Periodo de realización</h5>
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Inicio</label>
+                                <input type="date" class="form-control" id="inicio" name="inicio" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Fin</label>
+                                <input type="date" class="form-control" id="fin" name="fin" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    
+                    
+                    <div class="seccion" style="border: 1px solid #d0d0d0; padding: 25px; border-radius: 8px; background: #fafafa;">
+                        <h5 class="mt-4 fw-bold" style="color:#003366;">Instrucciones: Anotar el puntaje para cada una de las competencias blandas indicadas, considerando los siguientes niveles de desempeño: Excelente = 4, Notables = 3, Bueno = 2, Suficiente =1, Insuficiente = 0</h5>
+                        <br>
+                        <div class="header bg-primary text-white text-center py-2 mb-4"
+                            style="font-size: 20px; font-weight: 600; letter-spacing: .5px;">
+                            Genericas
+                        </div>
+
+                        <table class="table table-light table-bordered text-center">
+                            <thead>
+                                <th>No.</th>
+                                <th>Competencia blanda</th>
+                                <th>Puntaje</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Genera propuestas creativas, emprendedoras las para solución de problemas y gestiona los recursos necesarios para su implementación.</td>
+                                    <td><input type="number" class="form-control" name="p_1" min="0" max="4"></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Demuestra un comportamiento ético (disciplina, respeto, probidad, etc.)</td>
+                                    <td><input type="number" class="form-control" name="p_2" min="0" max="4"></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Trabaja en equipo en donde cuyos miembros juntos proveen liderazgo, crean un ambiente colaborativo e inclusivo, establecen metas, planean tareas y cumplen objetivos.</td>
+                                    <td><input type="number" class="form-control" name="p_3" min="0" max="4"></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Implementa las acciones y soluciones de los proyectos designados de manera organizada y productiva.</td>
+                                    <td><input type="number" class="form-control" name="p_4" min="0" max="4"></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Demuestra el correcto manejo de conflictos</td>
+                                    <td><input type="number" class="form-control" name="p_5" min="0" max="4"></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Tiene comunicación de forma oral de manera asertiva en diferentes audiencias</td>
+                                    <td><input type="number" class="form-control" name="p_6" min="0" max="4"></td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Se comunica de forma escrita efectivamente</td>
+                                    <td><input type="number" class="form-control" name="p_7" min="0" max="4"></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>El estudiante tiene que desarrollar la Inteligencia emocional (se comunicar efectivamente, es empático con otras personas, superar desafíos, se adapta a nuevas situaciones y aminorar conflictos).</td>
+                                    <td><input type="number" class="form-control" name="p_8" min="0" max="4"></td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>Toma decisiones, autoconfianza y un pensamiento crítico en las actividades que desarrolla para el beneficio o mejora del proyecto en que participa considerando el impacto de las soluciones ingenieriles en contextos globales, económicos, ambientales y sociales</td>
+                                    <td><input type="number" class="form-control" name="p_9" min="0" max="4"></td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>Demuestra liderazgo en las actividades encomendadas</td>
+                                    <td><input type="number" class="form-control" name="p_10" min="0" max="4"></td>
+                                </tr>
+
+                            </tbody>
+                                <!-- Agrega más filas según sea necesario -->
+                        </table>
+                    </div>
+                    <div class="mb-3">
+                            <label for="comentarios" class="form-label fw-semibold">Comentarios/Sugerencias</label>
+                            <textarea class="form-control" id="comentarios" name="comentarios" rows="3"></textarea>
+                        </div>
+                <button class="btn btn-info" type="submit">Enviar</button>
+            </form>
+
+        </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+   
+</body>
+</html>
