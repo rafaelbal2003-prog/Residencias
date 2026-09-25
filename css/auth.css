@@ -1,0 +1,52 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.25), transparent 28%),
+                radial-gradient(circle at bottom right, rgba(37, 99, 235, 0.3), transparent 30%),
+                linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.auth-page {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.card {
+    border-radius: 24px;
+    background: #ffffff;
+}
+
+.card-body {
+    position: relative;
+    z-index: 2;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.08);
+    pointer-events: none;
+}
+
+.form-control {
+    border-radius: 0.75rem;
+}
+
+.btn {
+    border-radius: 0.85rem;
+}
+
+.text-muted {
+    color: #6b7280 !important;
+}
+
+@media (max-width: 575.98px) {
+    .auth-page {
+        padding: 1rem 0;
+    }
+    .card {
+        border-radius: 1.5rem;
+    }
+}
