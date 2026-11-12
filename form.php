@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="solar/bootstrap.min.css">
+   <style>
+  .seccion {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  .checkbox-box {
+        background: #f1f1f1;
+        padding: 6px 10px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 6px;
+    }
+    .checkbox-box input[type="checkbox"] {
+        transform: scale(1.2);
+        margin-right: 8px;
+        cursor: pointer;
+    }
+
+
+</style>
+
+
+    
+</head>
+<body>
+    <header ></header>
+    <h1 style="text-align: center;">PROYECTO EDUCACIÓN DUAL</h1>
+    <h2 style="text-align: center;">Detección de necesidades</h2>
+        
+        <div class="container ">
+            
+            <form class="form-control" action="procesar.php" method="post">
+                    <div class="seccion" style="border: 1px solid #d0d0d0; padding: 25px; border-radius: 8px; background: #fafafa;">
+    
+                    <div class="seccion" style="border: 1px solid #d0d0d0; padding: 25px; border-radius: 8px; background: #fafafa;">
+                        
+                        <div class="header bg-primary text-white text-center py-2 mb-4" 
+                            style="font-size: 20px; font-weight: 600; letter-spacing: 0.5px;">
+                            Detección de la necesidad
+                        </div>
+
+                        
+                        <div class="mb-3">
+                            <label for="empresa" class="form-label fw-semibold">Empresa / Organización</label>
+                            <input type="text" class="form-control" id="empresa" name="empresa" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="proyecto" class="form-label fw-semibold">Nombre del Proyecto</label>
+                            <input type="text" class="form-control" id="proyecto" name="proyecto" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="departamento" class="form-label fw-semibold">Departamento</label>
+                            <input type="text" class="form-control" id="departamento" name="departamento" required>
+                        </div>
+
+                        
+                        <h5 class="mt-4 fw-bold" style="color:#003366;">Periodo de realización</h5>
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Inicio</label>
+                                <input type="date" class="form-control" id="inicio" name="inicio" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Fin</label>
+                                <input type="date" class="form-control" id="fin" name="fin" required>
+                            </div>
+                        </div>
+
+                        
+                        <h5 class="mt-4 fw-bold text-center" style="color:#003366;">Programas Educativos</h5>
+
+                        <div class="row mt-3">
+
+                            <div class="col-md-6">
+                                <div class="checkbox-box">
+                                    <input type="checkbox" id="ind" name="ind">
+                                    <label for="ind" class="mb-0">Ingeniería Industrial</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="checkbox-box">
+                                    <input type="checkbox" id="meca" name="meca">
+                                    <label for="meca" class="mb-0">Ingeniería Mecatrónica</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="checkbox-box">
+                                    <input type="checkbox" id="isic" name="isic">
+                                    <label for="isic" class="mb-0">Ingeniería en Sistemas Computacionales</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="checkbox-box">
+                                    <input type="checkbox" id="ali" name="ali">
+                                    <label for="ali" class="mb-0">Ingeniería en Industrias Alimentarias</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="checkbox-box">
+                                    <input type="checkbox" id="ges" name="ges">
+                                    <label for="ges" class="mb-0">Ingeniería en Gestión Empresarial</label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    
+                    <br>
+                    
+                    <div class="seccion" style="border: 1px solid #d0d0d0; padding: 25px; border-radius: 8px; background: #fafafa;">
+
+                        <div class="header bg-primary text-white text-center py-2 mb-4"
+                            style="font-size: 20px; font-weight: 600; letter-spacing: .5px;">
+                            Descripción del proyecto
+                        </div>
+
+                        
+                        <div class="mb-4">
+                            <label for="objetivo" class="form-label fw-semibold" style="color:#003366;">Objetivo General</label>
+                            <textarea class="form-control" rows="3" id="objetivo" name="objetivo" required></textarea>
+                        </div>
+
+                        
+                        <div class="mb-4">
+                            <label for="resumen" class="form-label fw-semibold" style="color:#003366;">Breve resumen del proyecto</label>
+                            <textarea class="form-control" rows="3" id="resumen" name="resumen" required></textarea>
+                        </div>
+
+                        
+                        <div class="mb-4">
+                            <label for="problematica" class="form-label fw-semibold" style="color:#003366;">Problemática a resolver</label>
+                            <textarea class="form-control" rows="3" id="problematica" name="problematica" required></textarea>
+                        </div>
+
+                        
+                        <div class="mb-4">
+                            <label for="resultados" class="form-label fw-semibold" style="color:#003366;">Resultados esperados</label>
+                            <textarea class="form-control" rows="3" id="resultados" name="resultados" required></textarea>
+                        </div>
+
+                        
+                        <div class="mb-2">
+                            <label for="producto" class="form-label fw-semibold" style="color:#003366;">Producto final esperado</label>
+                            <textarea class="form-control" rows="3" id="producto" name="producto" required></textarea>
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                     <div class="seccion">
+                        <div class="header bg-primary text-white text-center mb-3">Características de los colaboradores del proyecto (estudiantes)</div>
+
+                       <h5 class="mt-3">Número de estudiantes requeridos</h5>
+    
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label class="form-label">Hombres</label>
+                                <input type="number" class="form-control" id="hombres" name="hombres" >
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label">Mujeres</label>
+                                <input type="number" class="form-control" id="mujeres" name="mujeres" >
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label">Indistinto</label>
+                                <input type="number" class="form-control" id="indistinto" name="indistinto" >
+                            </div>
+                        </div>
+
+                        
+                        <div class="mt-4">
+                            <label class="form-label">Áreas de interés</label>
+                            <textarea class="form-control" rows="3" id="area" name="area" required></textarea>
+                        </div>
+
+                        <div class="mt-4">
+                            <label class="form-label">Conocimientos básicos requeridos</label>
+                            <textarea class="form-control" rows="3" id="conocimientosre" name="conocimientosre" required></textarea>
+                        </div>
+
+                        <div class="mt-4">
+                            <label class="form-label">Características personales</label>
+                            <textarea class="form-control" rows="3" id="caracteristicas" name="caracteristicas" required></textarea>
+                        </div>
+
+                    </div>
+
+
+                    <br>
+
+                     <div class="seccion" style="border: 1px solid #d0d0d0; padding: 25px; border-radius: 8px; background: #fafafa;">
+
+                        <div class="header bg-primary text-white text-center py-2 mb-4"
+                            style="font-size: 20px; font-weight: 600; letter-spacing: .5px;">
+                            Solicita
+                        </div>
+
+                        
+                        <div class="mb-4">
+                            <label for="solicitante" class="form-label fw-semibold" style="color:#003366;">Solicitante</label>
+                            <input type="text" class="form-control" id="solicitante" name="solicitante" required>
+                        </div>
+
+                        <div class="mb-2">
+                            <label for="jefe" class="form-label fw-semibold" style="color:#003366;">Jefe de Operaciones</label>
+                            <input type="text" class="form-control" id="jefe" name="jefe" required>
+                        </div>
+
+                    </div>
+
+
+                    <br>
+
+                     <div class="seccion">
+                        <div class="header bg-primary text-white" style="text-align: center;">Cronograma de actividades</div>
+                        <br>
+                        <h3>Actividades</h3>
+
+                        <div id="actividades"></div>
+
+                        <button type="button" class="btn btn-success" onclick="agregarActividad()">Agregar actividad</button>
+
+                        <script>
+                        let contador = 0;
+
+                        function agregarActividad() {
+                        contador++;
+
+                        const div = document.createElement("div");
+                        div.classList.add("seccion");
+                        div.innerHTML = `
+                        <h5>Actividad ${contador}</h5>
+
+                        <label>Descripción</label>
+                        <input type="text" name="desc[]" class="form-control" required>
+
+                        <label>Competencias</label>
+                        <input type="text" name="comp[]" class="form-control" required>
+
+                        <label>Tiempo</label>
+                        <input type="text" name="tiempo[]" class="form-control" required>
+
+                        <label>Evidencias</label>
+                        <input type="text" name="evidencias[]" class="form-control" required>`;
+
+                        document.getElementById("actividades").appendChild(div);
+                        }
+                        </script>
+                    </div>
+
+                    <br>
+
+                    <div class="seccion" style="border: 1px solid #d0d0d0; padding: 25px; border-radius: 8px; background: #fafafa;">
+
+                    <div class="header bg-primary text-white text-center py-2 mb-4"
+                        style="font-size: 20px; font-weight: 600; letter-spacing: .5px;">
+                        Responsable de llenarlo
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="nomr" class="form-label fw-semibold" style="color:#003366;">Nombre del responsable</label>
+                        <input type="text" class="form-control" id="nomr" name="nomr" required>
+                    </div>
+
+                </div>
+                <br>
+                <button class="btn btn-info" type="submit">Enviar</button>
+            </form>
+
+        </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

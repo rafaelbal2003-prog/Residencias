@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="solar/bootstrap.min.css">
+   <style>
+  .seccion {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  .checkbox-box {
+        background: #f1f1f1;
+        padding: 6px 10px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 6px;
+    }
+    .checkbox-box input[type="checkbox"] {
+        transform: scale(1.2);
+        margin-right: 8px;
+        cursor: pointer;
+    }
+
+
+</style>
+
+
+    
+</head>
+<body>
+    <header ></header>
+    <h1 style="text-align: center;">PROYECTO EDUCACIÓN DUAL</h1>
+    <h2 style="text-align: center;">Detección de necesidades</h2>
+        
+        <div class="container ">
+            
+            <form class="form-control" action="procesar2.php" method="post">
+                    <div class="seccion" style="border: 1px solid #d0d0d0; padding: 25px; border-radius: 8px; background: #fafafa;">
+                    <!--top cabecera-->
+                    <div class="seccion" style="border: 1px solid #d0d0d0; padding: 25px; border-radius: 8px; background: #fafafa;">
+                        
+                        <div class="header bg-primary text-white text-center py-2 mb-4" 
+                            style="font-size: 20px; font-weight: 600; letter-spacing: 0.5px;">
+                            Evaluacion de competencias Genericas y profesionales en el desarroqllo del Proyecto de Educación Dual(PED)
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="proyecto" class="form-label fw-semibold">Nombre del Proyecto</label>
+                            <input type="text" class="form-control" id="proyecto" name="proyecto" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="asesor_externo" class="form-label fw-semibold">Nombre del Asesor Externo</label>
+                            <input type="text" class="form-control" id="asesor_externo" name="asesor_externo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nombre_estudiante" class="form-label fw-semibold">Nombre del Estudiante</label>
+                            <input type="text" class="form-control" id="nombre_estudiante" name="nombre_estudiante" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="empresa" class="form-label fw-semibold">Empresa</label>
+                            <input type="text" class="form-control" id="empresa" name="empresa" required>
+                        </div>
+                        
+                        <h5 class="mt-4 fw-bold" style="color:#003366;">Periodo de realización</h5>
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Inicio</label>
+                                <input type="date" class="form-control" id="inicio" name="inicio" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Fin</label>
+                                <input type="date" class="form-control" id="fin" name="fin" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <br>
+                    
+                    <div class="seccion" style="border: 1px solid #d0d0d0; padding: 25px; border-radius: 8px; background: #fafafa;">
+
+                        <div class="header bg-primary text-white text-center py-2 mb-4"
+                            style="font-size: 20px; font-weight: 600; letter-spacing: .5px;">
+                            Genericas
+                        </div>
+
+                        <table class="table table-light table-bordered">
+                            <thead>
+                                <th>Indicador de desempeño</th>
+                                <th>Excelente</th>
+                                <th>Notable</th>
+                                <th>Bueno</th>
+                                <th>Suficiente</th>
+                                <th>Insuficiente</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Actúa con compromiso y convicción de su rol dentro de la empresa.</td>
+                                    <td><input type="radio" name="ex_1" value="Excelente"></td>
+                                    <td><input type="radio" name="no_1" value="Notable"></td>
+                                    <td><input type="radio" name="bu_1" value="Bueno"></td>
+                                    <td><input type="radio" name="su_1" value="Suficiente"></td>
+                                    <td><input type="radio" name="in_1" value="Insuficiente"></td>
+                                </tr>
+                                <tr>
+                                    <td>Interactúa de forma constructiva, respetando siempre la diversidad.</td>
+                                    <td><input type="radio" name="ex_2" value="Excelente"></td>
+                                    <td><input type="radio" name="no_2" value="Notable"></td>
+                                    <td><input type="radio" name="bu_2" value="Bueno"></td>
+                                    <td><input type="radio" name="su_2" value="Suficiente"></td>
+                                    <td><input type="radio" name="in_2" value="Insuficiente"></td>
+                                </tr>
+                                 <tr>
+                                    <td>Tiene capacidad para proponer soluciones imaginativas y originales.</td>
+                                    <td><input type="radio" name="ex_3" value="Excelente"></td>
+                                    <td><input type="radio" name="no_3" value="Notable"></td>
+                                    <td><input type="radio" name="bu_3" value="Bueno"></td>
+                                    <td><input type="radio" name="su_3" value="Suficiente"></td>
+                                    <td><input type="radio" name="in_3" value="Insuficiente"></td>
+                                </tr>
+                                 <tr>
+                                    <td>Participa de forma activa cuando trabaja en equipo.</td>
+                                    <td><input type="radio" name="ex_4" value="Excelente"></td>
+                                    <td><input type="radio" name="no_4" value="Notable"></td>
+                                    <td><input type="radio" name="bu_4" value="Bueno"></td>
+                                    <td><input type="radio" name="su_4" value="Suficiente"></td>
+                                    <td><input type="radio" name="in_4" value="Insuficiente"></td>
+                                </tr>
+                                <tr>
+                                    <td>No siente miedo de tomar la iniciativa, es proactivo.</td>
+                                    <td><input type="radio" name="ex_5" value="Excelente"></td>
+                                    <td><input type="radio" name="no_5" value="Notable"></td>
+                                    <td><input type="radio" name="bu_5" value="Bueno"></td>
+                                    <td><input type="radio" name="su_5" value="Suficiente"></td>
+                                    <td><input type="radio" name="in_5" value="Insuficiente"></td>
+                                </tr>
+                                <tr>
+                                    <td>Tiene la capacidad de adaptarse y actuar ante nuevas situaciones y hacer frente estando bajo presión laboral.</td>
+                                    <td><input type="radio" name="ex_6" value="Excelente"></td>
+                                    <td><input type="radio" name="no_6" value="Notable"></td>
+                                    <td><input type="radio" name="bu_6" value="Bueno"></td>
+                                    <td><input type="radio" name="su_6" value="Suficiente"></td>
+                                    <td><input type="radio" name="in_6" value="Insuficiente"></td>
+                                </tr>
+                            </tbody>
+                                <!-- Agrega más filas según sea necesario -->
+
+                        </table>
+
+                        <div class="header bg-primary text-white text-center py-2 mb-4"
+                            style="font-size: 20px; font-weight: 600; letter-spacing: .5px;">
+                            Asociadas al Perfil Profesional
+                        </div>
+
+                        <table class="table table-dark table-bordered">
+                            <thead>
+                                <th>Indicador de desempeño</th>
+                                <th>Excelente</th>
+                                <th>Notable</th>
+                                <th>Bueno</th>
+                                <th>Suficiente</th>
+                                <th>Insuficiente</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <div class="form-check">
+                                    <td>Capacidad de diseñar, implementar o mejorar sistemas de forma sustentable, considerando requisitos normativos y estándares de la organización.</td>
+                                    <td><input class="form-check-input" type="radio" name="p_ex_1" value="Excelente"></td>
+                                    <td><input class="form-check-input" type="radio" name="p_no_1" value="Notable"></td>
+                                    <td><input class="form-check-input" type="radio" name="p_bu_1" value="Bueno"></td>
+                                    <td><input class="form-check-input" type="radio" name="p_su_1" value="Suficiente"></td>
+                                    <td><input class="form-check-input"  type="radio" name="p_in_1" value="Insuficiente"></td>
+                                    </div>
+                                </tr>
+                                <tr>
+                                    <td>Capacidad de análisis, buscando optimizar los recursos y los procesos a su alcance.</td>
+                                    <td><input class="form-check-input" type="radio" name="p_ex_2" value="Excelente"></td>
+                                    <td><input class="form-check-input" type="radio" name="p_no_2" value="Notable"></td>
+                                    <td><input class="form-check-input" type="radio" name="p_bu_2" value="Bueno"></td>
+                                    <td><input class="form-check-input" type="radio" name="p_su_2" value="Suficiente"></td>
+                                    <td><input class="form-check-input" type="radio" name="p_in_2" value="Insuficiente"></td>
+                                </tr>
+                                <tr>
+                                    <td>Capacidad para crear, ejecutar y/o mejorar proyectos.</td>
+                                    <td><input class="form-check-input" type="radio" name="p_ex_3" value="Excelente"></td>
+                                    <td><input class="form-check-input" type="radio" name="p_no_3" value="Notable"></td>
+                                    <td><input class="form-check-input" type="radio" name="p_bu_3" value="Bueno"></td>
+                                    <td><input class="form-check-input" type="radio" name="p_su_3" value="Suficiente"></td>
+                                    <td><input class="form-check-input" type="radio" name="p_in_3" value="Insuficiente"></td>
+                                </tr>
+                                <tr>
+                                    <td>Utiliza tecnologías y sistemas de información de manera eficiente.</td>
+                                    <td><input class="form-check-input" type="radio" name="p_ex_4" value="Excelente"></td>
+                                    <td><input class="form-check-input" type="radio" name="p_no_4" value="Notable"></td>
+                                    <td><input class="form-check-input" type="radio" name="p_bu_4" value="Bueno"></td>
+                                    <td><input class="form-check-input" type="radio" name="p_su_4" value="Suficiente"></td>
+                                    <td><input class="form-check-input"  type="radio" name="p_in_4" value="Insuficiente"></td>
+                                </tr>
+                                <tr>
+                                    <td>Capacidad de comunicarse en un segundo idioma.</td>
+                                    <td><input class="form-check-input" type="radio" name="p_ex_5" value="Excelente"></td>
+                                    <td><input class="form-check-input" type="radio" name="p_no_5" value="Notable"></td>
+                                    <td><input class="form-check-input" type="radio" name="p_bu_5" value="Bueno"></td>
+                                    <td><input class="form-check-input" type="radio" name="p_su_5" value="Suficiente"></td>
+                                    <td><input class="form-check-input"  type="radio" name="p_in_5" value="Insuficiente"></td>
+                                </tr>
+
+                            </tbody>
+                                <!-- Agrega más filas según sea necesario -->
+
+                        </table>
+                    </div>
+                    <div class="mb-3">
+                            <label for="comentarios" class="form-label fw-semibold">Comentarios</label>
+                            <textarea class="form-control" id="comentarios" name="comentarios" rows="3"></textarea>
+                        </div>
+                <button class="btn btn-info" type="submit">Enviar</button>
+            </form>
+
+        </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('tbody tr').forEach(function(row) {
+            const radios = row.querySelectorAll('input[type="radio"]');
+            radios.forEach(function(radio) {
+                radio.addEventListener('change', function() {
+                    if (this.checked) {
+                        radios.forEach(function(otherRadio) {
+                            if (otherRadio !== radio) {
+                                otherRadio.checked = false;
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
