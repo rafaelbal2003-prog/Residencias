@@ -1,26 +1,7 @@
 <?php
+include_once('combos.php');
+$empresas=combo_empresas();
 session_start();
-
-$mensaje = '';
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $nombre = trim($_POST['firstName']);
-    $apellido = trim($_POST['lastName']);
-    $email = trim($_POST['email']);
-    $password = $_POST['password'];
-    $confirmPassword = $_POST['confirmPassword'];
-
-    if ($password !== $confirmPassword) {
-        $mensaje = '<div class="alert alert-danger text-center">Las contraseñas no coinciden.</div>';
-    } else {
-
-        $_SESSION['nuevo_usuario_email'] = $email;
-        $_SESSION['nuevo_usuario_password'] = $password;
-        $_SESSION['nuevo_usuario_nombre'] = $nombre . ' ' . $apellido;
-
-        $mensaje = '<div class="alert alert-success text-center">¡Cuenta creada con éxito! Ya puedes <a href="login.php">iniciar sesión</a>.</div>';
-    }
-}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -42,34 +23,38 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <h1 class="h3 fw-bold mb-1">Crear cuenta</h1>
                                 <p class="text-muted mb-0">Regístrate para usar la plataforma.</p>
                             </div>
-
-                            <?php echo $mensaje; ?>
-
-                            <form action="register.php" method="post" autocomplete="off">
+                            <form action="register_asesor.php" method="post" autocomplete="off">
                                 <div class="row g-3">
                                     <div class="col-md-6">
-                                        <label for="firstName" class="form-label">Nombre</label>
-                                        <input type="text" class="form-control shadow-sm" id="firstName" name="firstName" placeholder="Juan" required>
+                                        <label for="nombres" class="form-label">Nombre</label>
+                                        <input type="text" class="form-control shadow-sm" id="nombres" name="nombres" placeholder="Juan" required>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="lastName" class="form-label">Apellido</label>
-                                        <input type="text" class="form-control shadow-sm" id="lastName" name="lastName" placeholder="Pérez" required>
+                                        <label for="apellidos" class="form-label">Apellido</label>
+                                        <input type="text" class="form-control shadow-sm" id="apellidos" name="apellidos" placeholder="Pérez" required>
                                     </div>
                                 </div>
 
                                 <div class="mb-3 mt-3">
-                                    <label for="email" class="form-label">Correo electrónico</label>
-                                    <input type="email" class="form-control shadow-sm" id="email" name="email" placeholder="nombre@ejemplo.com" required>
+                                    <label for="correo" class="form-label">Correo electrónico</label>
+                                    <input type="email" class="form-control shadow-sm" id="correo" name="correo" placeholder="nombre@ejemplo.com" required>
                                 </div>
 
                                 <div class="row g-3">
                                     <div class="col-md-6">
-                                        <label for="password" class="form-label">Contraseña</label>
-                                        <input type="password" class="form-control shadow-sm" id="password" name="password" placeholder="Contraseña" required>
+                                        <label for="contrasena" class="form-label">Contraseña</label>
+                                        <input type="password" class="form-control shadow-sm" id="contrasena" name="contrasena" placeholder="Contraseña" required>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="confirmPassword" class="form-label">Confirmar contraseña</label>
-                                        <input type="password" class="form-control shadow-sm" id="confirmPassword" name="confirmPassword" placeholder="Repite la contraseña" required>
+                                        <div class="mb-3">
+                                            <label for="id_empresa" class="form-label fw-semibold" style="color:#003366;">Empresa Asignada</label>
+                                            <select class="form-select" id="id_empresa" name="id_empresa" required>
+                                                <option value="0">-- Selecciona una empresa --</option>
+                                                <?php
+                                                    echo $empresas;
+                                                ?>
+                                            </select>
+                </div>
                                     </div>
                                 </div>
 
